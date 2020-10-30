@@ -12,6 +12,12 @@
 
     <title>Halloween</title>
 </head>
+<script>
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
 <style>
     body {
         background-color: black;
@@ -32,7 +38,7 @@
         cursor: pointer;
         transition: all 0.3s;
     }	
-}
+
     img {
         height: 300px;
         max-width: 200px;
@@ -47,43 +53,193 @@
 
 <body>
     <div class="container">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex flex-wrap justify-content-center">
+
+
+    <!--card mike myers-->
+  <div class="modal fade" id="michaelmyers" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal michaelmyers</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
             <div class="card text-center" style="width: 18rem;">
                 <img src="imagens/Michael-Myers.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Michael Myers</h5>
                     <p class="card-text">Michael Myers é um personagem fictício da série de filmes slasher Halloween.
                     </p>
-                    <a href="#" class="btn btn-primary">Conheça mais...</a>
+                    <a data-toggle="modal" data-target="#michaelmyers" href="#" id="michaelmyers" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
+<!--fechamento card  mike myers-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- card json-->
+<div class="modal fade" id="json" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal json</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
             <div class="card text-center" style="width: 18rem;">
                 <img src="imagens/json.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Jason Voorhees</h5>
                     <p class="card-text">Jason Voorhees é um personagem fictício da série Sexta-Feira 13 (Friday the
                         13th).</p>
-                    <a href="#" class="btn btn-primary">Conheça mais...</a>
+                    <a data-toggle="modal" data-target="#json" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
+<!--fechamento card json-->
+
+
+
+
+
+
+<!--card Freddy_Krueger-->
+<div class="modal fade" id="Freddy_Krueger" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal Freddy_Krueger</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
             <div class="card text-center" style="width: 18rem;">
                 <img src="imagens/Freddy_Krueger.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Freddy Krueger</h5>
                     <p class="card-text">Freddy Krueger é um personagem da série de filmes de terror A Hora do Pesadelo.
                     </p>
-                    <a href="#" class="btn btn-primary">Conheça mais...</a>
+                    <a data-toggle="modal" data-target="#Freddy_Krueger" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
+<!--fechamento card Freddy_Krueger-->
+
+
+
+
+
+
+
+
+
+
+
+                 <!--card it-->  
+            <div class="modal fade" id="it" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="staticBackdropLabel">Modal it</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Understood</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+
+
             <div class="card text-center" style="width: 18rem;">
                 <img src="imagens/it.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Pennywise</h5>
                     <p class="card-text">Pennywise é uma criatura sobrenatural, e geralmente aparece como um palhaço.
                     </p>
-                    <a href="#" class="btn btn-primary">Conheça mais...</a>
+                    <a data-toggle="modal" data-target="#it" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
+<!--fechamento card it-->
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
