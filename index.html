@@ -7,103 +7,265 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="jquery.js"></script>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>Halloween</title>
 </head>
 <script>
-
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
 </script>
 <style>
+    @font-face {
+        font-family: halloween1;
+        src: url(fonts/CFHalloween-Regular.ttf)
+    }
+    
+    @font-face {
+        font-family: halloween2;
+        src: url(fonts/Halloween.ttf)
+    }
+    
+    .halloween1 {
+        text-align: center;
+        color: white;
+        font-family: halloween1;
+        font-size: 100px;
+    }
+    
+    .halloween2 {
+        text-align: center;
+        color: white;
+        font-family: halloween2;
+        font-size: 100px;
+    }
+    
     body {
         background-color: black;
     }
-
+    
     p {
         color: white;
     }
-
+    
     h5 {
         color: red;
     }
-
-    .card {
     
+    .card {
         margin: 10px;
         width: 200px !important;
         background-color: black;
         cursor: pointer;
         transition: all 0.5s ease;
-    }	
-    .card:hover{
-      z-index: 2000;
-      transform: scale(1.5)
     }
-
+    
+    .card:hover {
+        z-index: 2000;
+        transform: scale(1.5)
+    }
+    
     img {
         height: 300px;
         max-width: 200px;
         max-height: 300px;
     }
-
+    
     .card-text {
         height: 100px;
         max-height: 100px;
     }
-    .sombra{
-      transition: all 0.3s ease 0s;
-      box-shadow: 1px 1px 10px 1px #888888!important;
+    
+    .sombra {
+        transition: all 0.3s ease 0s;
+        box-shadow: 1px 1px 10px 1px #888888!important;
     }
-  
-    .modal{
-      z-index: 2001;
+    
+    .customlinha {
+        height: 400px;
     }
-    @media screen and (max-device-width:739px) {
-	.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;;
-    width: 90%!important;
-   
-	}
-  img{
-    max-width: 100%;
-  }
-}
+    
+    .modal {
+        z-index: 2001;
+    }
+    
+    @media only screen and (max-width:1199px) {
+        .coluna2 {
+            margin-top: 100px;
+        }
+    }
+    
+    @media only screen and (max-width:991px) {
+        .coluna2 {
+            margin-top: 150px;
+        }
+    }
+    
+    @media only screen and (max-width:739px) {
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ;
+            width: 90%!important;
+        }
+        img {
+            max-width: 100%;
+        }
+        .coluna2 {
+            margin-top: 200px;
+        }
+    }
+    
+    @media only screen and (max-width: 500px) {
+        .coluna2 {
+            margin-top: 50px;
+        }
+        .modal-dialog {
+            max-width: 900px;
+        }
+        .halloween1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        .halloween2 {
+            text-align: center;
+            font-size: 50px;
+        }
+    }
+    
+     :hover.abobora {
+        color: #f67f10;
+        cursor: pointer;
+    }
+    
+     :hover.bruxa {
+        color: #a3079b;
+        cursor: pointer;
+    }
+    
+     :hover.gato {
+        color: #ee1b73;
+        cursor: pointer;
+    }
+    
+     :hover.monstro {
+        color: #54d63a;
+        cursor: pointer;
+    }
+    
+     :hover.aranha {
+        color: #ff0000;
+        cursor: pointer;
+    }
+    
+     :hover.fastasma {
+        color: #00cdf1;
+        cursor: pointer;
+    }
+    
+     :hover.mumia {
+        color: #e0ff2d;
+        cursor: pointer;
+    }
+    
+     :hover.morcego {
+        color: #3b16df;
+        cursor: pointer;
+    }
+    
+    a {
+        color: white!important;
+        background-color: none!important;
+        text-decoration: none!important;
+    }
+    
+    a:link {
+        color: none!important;
+        background-color: none!important;
+        text-decoration: none!important;
+    }
+    
+    a:visited {
+        color: none!important;
+        background-color: transparent!important;
+        text-decoration: none!important;
+    }
+    
+    a:hover {
+        color: none!important;
+        background-color: transparent!important;
+        text-decoration: none!important;
+    }
+    
+    a:active {
+        color: none!important;
+        background-color: none!important;
+        text-decoration: none!important;
+    }
 </style>
 
 <body>
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-center">
 
-          <!-- data-backdrop="static" -->
-    <!--card mike myers-->
-  <div class="modal fade" id="michaelmyers"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">MICHAEL MYERS</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="d-flex customlinha flex-wrap justify-content-center align-content-center ">
+            <div class="col-12">
+                < <h1 class="halloween1 text-center">HAPPY HALL<span style="color: #f67f10;">O</span>WEEN</h1>
+
+                    <h1 class=" halloween2">
+                        <a href="https://www.youtube.com/watch?v=6scZ1qj2w38" target="_blank"> <span class="abobora">a</span></a>
+                        <a href="https://www.youtube.com/watch?v=_iEHOuPsRsY" target="_blank"> <span class="fastasma">d</span></a>
+                        <a href="https://www.youtube.com/watch?v=oYwbESR4J_Q" target="_blank"> <span class="mumia">f</span></a>
+                        <a href="https://www.youtube.com/watch?v=KvxqIaNO7Ek" target="_blank"> <span class="abobora">n</span></a>
+                        <a href="https://www.youtube.com/watch?v=qQFNkfV_d2U" target="_blank"> <span class="morcego">h</span></a>
+                        <a href="https://www.youtube.com/watch?v=-JWLk9SAZxI" target="_blank"> <span class="abobora">k</span></a>
+                    </h1>
+                    <h1 class=" halloween2">
+                        <a href="https://www.youtube.com/watch?v=NL6mioAlpJk" target="_blank"> <span class="gato">m</span> </a>
+                        <a href="https://www.youtube.com/watch?v=19SWGRq09Is" target="_blank"> <span class="abobora">n</span> </a>
+                        <a href="https://www.youtube.com/watch?v=BCQJnOn0ru0" target="_blank"> <span class="fastasma">o</span> </a>
+                        <a href="https://www.youtube.com/watch?v=aDfqYzmUu7Y" target="_blank"> <span class="bruxa">r</span> </a>
+                        <a href="https://www.youtube.com/watch?v=uz5i6MXZrOY" target="_blank"> <span class="abobora">s</span> </a>
+
+                        <a href="https://www.youtube.com/watch?v=0AHVW_yenRs" target="_blank"> <span class="aranha">t</span> </a>
+                        <a href="https://www.youtube.com/watch?v=GQrrXceHn2E" target="_blank"> <span class="monstro">u</span></a>
+                    </h1>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class=" coluna2 d-flex flex-wrap justify-content-center">
+            <!-- data-backdrop="static" -->
+            <!--card mike myers-->
+            <div class="modal fade" id="michaelmyers" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">MICHAEL MYERS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          Michael Myers é um personagem fictício da série de filmes slasher Halloween. Aparece pela primeira vez em 1978 no filme Halloween, realizado por John Carpenter, onde é retratado como uma criança de seis anos que assassina a sua irmã mais velha na noite de Halloween e que depois de ficar institucionalizado num hospital psiquiátrico durante quinze anos, escapa e regressa a casa para matar mais adolescentes.
-
-          No Halloween original, o adulto Michael Myers (referido como "The Shape" nos créditos), foi interpretado por Nick Castle na maior parte do filme, substituído depois por Tony Moran e por Tommy Lee Wallace para as cenas finais. Criado por Debra Hill e por Carpenter, Myers já apareceu em nove filmes, videojogos, romances e em vários livros de banda desenhada, que de alguma forma expandem o universo fictício da personagem.
-          
-          Michael Myers é o principal antagonista na série de filmes Halloween, excepto em Halloween III: Season of the Witch, que não está continuamente ligado aos outros filmes. Desde Castle, Moran e Wallace que o interpretaram no filme original em 1978, sete outras pessoas já tiveram essa função. Michael Myers é caracterizado como "mal em estado puro", tanto diretamente nos filmes, como pelos cineastas que o criaram e o produziram ao longo da série, assim como por participantes em questionários de pesquisa aleatória. A inspiração de Carpenter para o "mal" que Michael encarna, veio durante uma viagem de estudo que fez a uma instituição de saúde mental no Kentucky.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <div class="modal-body">
+                            Michael Myers é um personagem fictício da série de filmes slasher Halloween. Aparece pela primeira vez em 1978 no filme Halloween, realizado por John Carpenter, onde é retratado como uma criança de seis anos que assassina a sua irmã mais velha na noite
+                            de Halloween e que depois de ficar institucionalizado num hospital psiquiátrico durante quinze anos, escapa e regressa a casa para matar mais adolescentes. No Halloween original, o adulto Michael Myers (referido como "The Shape"
+                            nos créditos), foi interpretado por Nick Castle na maior parte do filme, substituído depois por Tony Moran e por Tommy Lee Wallace para as cenas finais. Criado por Debra Hill e por Carpenter, Myers já apareceu em nove filmes,
+                            videojogos, romances e em vários livros de banda desenhada, que de alguma forma expandem o universo fictício da personagem. Michael Myers é o principal antagonista na série de filmes Halloween, excepto em Halloween III: Season
+                            of the Witch, que não está continuamente ligado aos outros filmes. Desde Castle, Moran e Wallace que o interpretaram no filme original em 1978, sete outras pessoas já tiveram essa função. Michael Myers é caracterizado como
+                            "mal em estado puro", tanto diretamente nos filmes, como pelos cineastas que o criaram e o produziram ao longo da série, assim como por participantes em questionários de pesquisa aleatória. A inspiração de Carpenter para o
+                            "mal" que Michael encarna, veio durante uma viagem de estudo que fez a uma instituição de saúde mental no Kentucky.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -120,37 +282,42 @@ $('#myModal').on('shown.bs.modal', function () {
                     <a data-toggle="modal" data-target="#michaelmyers" href="#" id="michaelmyers" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
-<!--fechamento card  mike myers-->
+            <!--fechamento card  mike myers-->
 
 
 
 
 
-<!-- card json-->
-<div class="modal fade" id="json"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">JSON</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!-- card json-->
+            <div class="modal fade" id="json" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">JSON</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          Jason Voorhees é um personagem fictício da série Sexta-Feira 13 (Friday the 13th). Apareceu pela primeira vez no filme Friday the 13th (1980) (interpretado por Ari Lehman) como o filho mais novo de Mrs. Voorhees, uma ex-cozinheira no acampamento Crystal Lake que se torna assassina. Criado por Victor Miller, com contribuições de Ron Kurz, Sean S. Cunningham e Tom Savini, não era intenção fazer de Jason o principal antagonista da série. O personagem tem vindo desde então a ser representado em sequencias desde o primeiro filme, banda desenhada, videojogos e num filme crossover, em que é protagonista com outro personagem icônico do cinema de terror, Freddy Krueger.
-
-          Jason tem sido primariamente o antagonista nos filmes, seja a perseguir e a matar outros personagens, ou atuando como uma ameaça psicológica para o protagonista, como em Friday the 13th: A New Beginning. Desde a interpretação de Lehman, Jason tem sido representado por múltiplos atores e duplos, por vezes por mais do que um de cada vez, causando controvérsia sobre a quem deveriam ser dados os créditos de representação. Kane Hodder é o mais conhecido a interpretar Jason Voorhees, tendo-o já feito em quatro filmes consecutivos.
-          
-          A aparência física de Jason teve várias transformações, com vários artistas de efeitos especiais a deixar a sua marca no desenho do personagem, incluindo o artista de maquilhagem Stan Winston. O desenho inicial de Tom Savini tem sido a base para muitas das incarnações seguintes. A icónica máscara de hóquei foi usada pela primeira vez em Friday the 13th: Part III. Desde Friday the 13th Part VI: Jason Lives, os cineastas deram a Jason força sobre-humana, poderes regenerativos e invulnerabilidade quase intocável. Tem sido descrito como um personagem complacente e compreensivo, cuja motivação para matar tem sido citada como sendo impulsionada pelas ações imorais das suas vítimas e pela sua própria raiva por se ter afogado quando era criança.[3] Jason Voorhees já foi protagonista em várias revistas de humor, referenciado em vários filmes, parodiado em programas de televisão, inspiração para canções e para a criação de uma banda de horror punk. Inspirados nos filmes Friday the 13th, empresas de brinquedos lançaram produtos baseados nas várias versões do personagem.
-          
-          Em 1992, Jason ganhou o prémio Lifetime Achievement Award da MTV. Foi o primeiro das únicas três personagens fictícias a quem foram dadas este prêmio; os outros foram Godzilla em 1996 e Chewbacca em 1997. Jason ficou em #26 na lista dos "100 Maiores Vilões de Sempre" da revista Wizard e em #37 entre "100 Maiores Vilões de Sempre do Cinema", numa lista feita pelo site Games Radar. A máscara de hóquei de Jason Voorhees é uma imagem amplamente reconhecida na cultura popular.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <div class="modal-body">
+                            Jason Voorhees é um personagem fictício da série Sexta-Feira 13 (Friday the 13th). Apareceu pela primeira vez no filme Friday the 13th (1980) (interpretado por Ari Lehman) como o filho mais novo de Mrs. Voorhees, uma ex-cozinheira no acampamento Crystal
+                            Lake que se torna assassina. Criado por Victor Miller, com contribuições de Ron Kurz, Sean S. Cunningham e Tom Savini, não era intenção fazer de Jason o principal antagonista da série. O personagem tem vindo desde então a ser
+                            representado em sequencias desde o primeiro filme, banda desenhada, videojogos e num filme crossover, em que é protagonista com outro personagem icônico do cinema de terror, Freddy Krueger. Jason tem sido primariamente o antagonista
+                            nos filmes, seja a perseguir e a matar outros personagens, ou atuando como uma ameaça psicológica para o protagonista, como em Friday the 13th: A New Beginning. Desde a interpretação de Lehman, Jason tem sido representado por
+                            múltiplos atores e duplos, por vezes por mais do que um de cada vez, causando controvérsia sobre a quem deveriam ser dados os créditos de representação. Kane Hodder é o mais conhecido a interpretar Jason Voorhees, tendo-o já
+                            feito em quatro filmes consecutivos. A aparência física de Jason teve várias transformações, com vários artistas de efeitos especiais a deixar a sua marca no desenho do personagem, incluindo o artista de maquilhagem Stan Winston.
+                            O desenho inicial de Tom Savini tem sido a base para muitas das incarnações seguintes. A icónica máscara de hóquei foi usada pela primeira vez em Friday the 13th: Part III. Desde Friday the 13th Part VI: Jason Lives, os cineastas
+                            deram a Jason força sobre-humana, poderes regenerativos e invulnerabilidade quase intocável. Tem sido descrito como um personagem complacente e compreensivo, cuja motivação para matar tem sido citada como sendo impulsionada
+                            pelas ações imorais das suas vítimas e pela sua própria raiva por se ter afogado quando era criança.[3] Jason Voorhees já foi protagonista em várias revistas de humor, referenciado em vários filmes, parodiado em programas de
+                            televisão, inspiração para canções e para a criação de uma banda de horror punk. Inspirados nos filmes Friday the 13th, empresas de brinquedos lançaram produtos baseados nas várias versões do personagem. Em 1992, Jason ganhou
+                            o prémio Lifetime Achievement Award da MTV. Foi o primeiro das únicas três personagens fictícias a quem foram dadas este prêmio; os outros foram Godzilla em 1996 e Chewbacca em 1997. Jason ficou em #26 na lista dos "100 Maiores
+                            Vilões de Sempre" da revista Wizard e em #37 entre "100 Maiores Vilões de Sempre do Cinema", numa lista feita pelo site Games Radar. A máscara de hóquei de Jason Voorhees é uma imagem amplamente reconhecida na cultura popular.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -163,37 +330,40 @@ $('#myModal').on('shown.bs.modal', function () {
                 <img src="imagens/json.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Jason Voorhees</h5>
-                    <p class="card-text">Jason Voorhees é um personagem fictício da série Sexta-Feira 13 (Friday the
-                        13th).</p>
+                    <p class="card-text">Jason Voorhees é um personagem fictício da série Sexta-Feira 13 (Friday the 13th).
+                    </p>
                     <a data-toggle="modal" data-target="#json" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
-<!--fechamento card json-->
+            <!--fechamento card json-->
 
 
 
 
 
 
-<!--card Freddy_Krueger-->
-<div class="modal fade" id="Freddy_Krueger"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Freddy Krueger</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card Freddy_Krueger-->
+            <div class="modal fade" id="Freddy_Krueger" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Freddy Krueger</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          Freddy Krueger é um personagem fictício da série de filmes de terror A Nightmare on Elm Street (no Brasil, A Hora do Pesadelo; em Portugal, Pesadelo em Elm Street). Freddy é um assassino[1] de crianças da fictícia Springwood, Ohio, que após ser queimado por pais vingativos passa a atacar adolescentes em seus sonhos, matando-as no mundo real por tabela. O facto de ter o poder de controlar os sonhos das pessoas e matá-las durante o sono, valeu-lhe as alcunhas de "Lorde dos Pesadelos" e "Senhor dos Sonhos". Robert Englund foi o intérprete original de Freddy, participando de sete filmes mais um crossover com Jason Voorhees da série Sexta-Feira 13. Em um remake do filme original lançado em 2010, Freddy é interpretado por Jackie Earle Haley. Freddy também aparece como um personagem jogável no jogo Mortal Kombat (2011) e em Dead by daylight.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <div class="modal-body">
+                            Freddy Krueger é um personagem fictício da série de filmes de terror A Nightmare on Elm Street (no Brasil, A Hora do Pesadelo; em Portugal, Pesadelo em Elm Street). Freddy é um assassino[1] de crianças da fictícia Springwood, Ohio, que após ser queimado
+                            por pais vingativos passa a atacar adolescentes em seus sonhos, matando-as no mundo real por tabela. O facto de ter o poder de controlar os sonhos das pessoas e matá-las durante o sono, valeu-lhe as alcunhas de "Lorde dos Pesadelos"
+                            e "Senhor dos Sonhos". Robert Englund foi o intérprete original de Freddy, participando de sete filmes mais um crossover com Jason Voorhees da série Sexta-Feira 13. Em um remake do filme original lançado em 2010, Freddy é interpretado
+                            por Jackie Earle Haley. Freddy também aparece como um personagem jogável no jogo Mortal Kombat (2011) e em Dead by daylight.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -207,7 +377,7 @@ $('#myModal').on('shown.bs.modal', function () {
                     <a data-toggle="modal" data-target="#Freddy_Krueger" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
-<!--fechamento card Freddy_Krueger-->
+            <!--fechamento card Freddy_Krueger-->
 
 
 
@@ -219,40 +389,40 @@ $('#myModal').on('shown.bs.modal', function () {
 
 
 
-                 <!--card it-->  
-            <div class="modal fade" id="it"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+            <!--card it-->
+            <div class="modal fade" id="it" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
                 <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="staticBackdropLabel">Modal it</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal it</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
+                        </div>
+                        <div class="modal-body">
+                            Pennywise (Parcimonioso/ Cauteloso, em português), também conhecido como Paulo Wagner, é uma criatura sobrenatural metamorfa, que muda de forma, e geralmente aparece na forma de um palhaço para atrair suas presas preferidas: crianças. No livro de terror
+                            It (A Coisa), publicado em 1986 pelo escritor Stephen King, um de seus romances mais volumosos, o assustador palhaço alimenta-se dos medos e fobias das crianças, que moram na cidade fictícia de Derry, através da habilidade
+                            da leitura de mente das vítimas, toma a forma do que lhes der mais medo, assim como Freddy Krueger em seus filmes. Se denomina, devorador de mundos e de crianças, e possivelmente causa câncer nas pessoas. Essa entidade em forma
+                            de palhaço, que se nomeia Robert Gray, foi interpretada pelo ator inglês Tim Curry no filme IT - Uma Obra Prima do Medo em 1990, servindo até como inspiração para o nome de uma banda de punk rock californiana Pennywise. Em
+                            2017, foi interpretado por Bill Skarsgård em It: A Coisa, readaptação do livro. Pennywise apareceu na Terra há muitos séculos, em um evento cataclísmico, similar a uma colisão de um asteroide, em um lugarzinho que futuramente
+                            seria Derry, no estado americano de Maine (onde se passa a história do livro). Aparentemente, ele esperou milhões de anos em silêncio até o aparecimento dos humanos (o que de alguma forma ele sabia que iria acontecer). Desde
+                            então ele acorda em ciclos de 27 a 30 anos, e caça crianças, atraindo-as como um simples palhaço para depois devorá-las. Ele prefere crianças, porque os medos de uma criança são mais fáceis de tomar uma forma física e consequentemente
+                            assustando facilmente (diferente de adultos, que tem medo de coisas mais sem forma, como falência, solidão, o que vem após a morte, etc). Assusta-las antes de devorar equivale a "temperar a carne". Os ciclos da Coisa são conhecidos
+                            por serem extremamente violentos, mas as pessoas acabam se esquecendo disso devido a influência que a Coisa tem sobre o população da cidade de Derry. A Coisa possui um rival, conhecido como "A Tartaruga", outra entidade superior
+                            que criara o Universo em que vivemos, mas que tanto a Coisa quanto a Tartaruga são seres criados por outra entidade maior, conhecida como "O Outro". A Coisa e a Tartaruga são eternos inimigos, já que a primeira é a forma da
+                            destruição, enquanto a segunda representa a criação. Apesar de serem praticamente idênticos e opostos, a Coisa considera-se um ser superior, acreditando que seu rival é "quase tão superior quanto ele" e os humanos são meros
+                            brinquedos. Em algumas partes do livro vemos as coisas do ponto de vista da Coisa, onde descobrimos o que ele pensa, porque ele age da maneira que age, e tantas outras coisas. Durante o livro, a Coisa enfrenta um grupo de crianças
+                            conhecidas como "O Clube dos Perdedores", através do "Ritual de Chud",[1] o que a força a entrar em hibernação mais cedo do que o esperado. No próximo ciclo, a Coisa desperta e volta a assassinar crianças, fazendo com que o
+                            Clube dos Perdedores, agora adultos, voltar e acabar definitivamente com a entidade. No início, os protagonistas achavam que a Coisa era do sexo masculino, por assumir a forma do palhaço Pennywise, mas no final descobrem que
+                            a Coisa é uma fêmea, pois na batalha final, Bill e seus amigos encontram vários ovos no local, que indica que a Coisa estava se reproduzindo com o intuito de deixar descendentes para destruir a raça humana.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      Pennywise (Parcimonioso/ Cauteloso, em português), também conhecido como Paulo Wagner, é uma criatura sobrenatural metamorfa, que muda de forma, e geralmente aparece na forma de um palhaço para atrair suas presas preferidas: crianças. No livro de terror It (A Coisa), publicado em 1986 pelo escritor Stephen King, um de seus romances mais volumosos, o assustador palhaço alimenta-se dos medos e fobias das crianças, que moram na cidade fictícia de Derry, através da habilidade da leitura de mente das vítimas, toma a forma do que lhes der mais medo, assim como Freddy Krueger em seus filmes. Se denomina, devorador de mundos e de crianças, e possivelmente causa câncer nas pessoas.
-
-Essa entidade em forma de palhaço, que se nomeia Robert Gray, foi interpretada pelo ator inglês Tim Curry no filme IT - Uma Obra Prima do Medo em 1990, servindo até como inspiração para o nome de uma banda de punk rock californiana Pennywise. Em 2017, foi interpretado por Bill Skarsgård em It: A Coisa, readaptação do livro.
-
-Pennywise apareceu na Terra há muitos séculos, em um evento cataclísmico, similar a uma colisão de um asteroide, em um lugarzinho que futuramente seria Derry, no estado americano de Maine (onde se passa a história do livro). Aparentemente, ele esperou milhões de anos em silêncio até o aparecimento dos humanos (o que de alguma forma ele sabia que iria acontecer). Desde então ele acorda em ciclos de 27 a 30 anos, e caça crianças, atraindo-as como um simples palhaço para depois devorá-las.
-
-Ele prefere crianças, porque os medos de uma criança são mais fáceis de tomar uma forma física e consequentemente assustando facilmente (diferente de adultos, que tem medo de coisas mais sem forma, como falência, solidão, o que vem após a morte, etc). Assusta-las antes de devorar equivale a "temperar a carne". Os ciclos da Coisa são conhecidos por serem extremamente violentos, mas as pessoas acabam se esquecendo disso devido a influência que a Coisa tem sobre o população da cidade de Derry.
-
-A Coisa possui um rival, conhecido como "A Tartaruga", outra entidade superior que criara o Universo em que vivemos, mas que tanto a Coisa quanto a Tartaruga são seres criados por outra entidade maior, conhecida como "O Outro". A Coisa e a Tartaruga são eternos inimigos, já que a primeira é a forma da destruição, enquanto a segunda representa a criação.
-
-Apesar de serem praticamente idênticos e opostos, a Coisa considera-se um ser superior, acreditando que seu rival é "quase tão superior quanto ele" e os humanos são meros brinquedos. Em algumas partes do livro vemos as coisas do ponto de vista da Coisa, onde descobrimos o que ele pensa, porque ele age da maneira que age, e tantas outras coisas.
-
-Durante o livro, a Coisa enfrenta um grupo de crianças conhecidas como "O Clube dos Perdedores", através do "Ritual de Chud",[1] o que a força a entrar em hibernação mais cedo do que o esperado. No próximo ciclo, a Coisa desperta e volta a assassinar crianças, fazendo com que o Clube dos Perdedores, agora adultos, voltar e acabar definitivamente com a entidade.
-
-No início, os protagonistas achavam que a Coisa era do sexo masculino, por assumir a forma do palhaço Pennywise, mas no final descobrem que a Coisa é uma fêmea, pois na batalha final, Bill e seus amigos encontram vários ovos no local, que indica que a Coisa estava se reproduzindo com o intuito de deixar descendentes para destruir a raça humana.
-                  </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            
+            </div>
+
 
 
             <div data-toggle="modal" data-target="#it" class="aumentar sombra card text-center" style="width: 18rem;">
@@ -264,264 +434,254 @@ No início, os protagonistas achavam que a Coisa era do sexo masculino, por assu
                     <a data-toggle="modal" data-target="#it" href="#" class="btn btn-primary">Conheça mais...</a>
                 </div>
             </div>
-<!--fechamento card it-->
+            <!--fechamento card it-->
 
 
-  <!--card dracula-->  
-  <div class="modal fade" id="dracula"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">DRACULA</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card dracula-->
+            <div class="modal fade" id="dracula" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">DRACULA</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-        </div>
-        <div class="modal-body">
-          Começando
-           com o vampiro mais famoso de toda a história, 
-           Drácula fez sucesso em inúmeras encarnações. 
-           Sua aparição original foi no livro Drácula de Bram Stoker, lançado em 1897. Daí em frente, o vampirão apareceu em vários filmes,
-            seja em adaptações do romance em que originalmente apareceu ou, na maioria das vezes,
-             em histórias que só incluem o personagem, mas não recontam a história de seu livro. Duas das aparições mais célebres foram em Nosferatu (1922),
-              uma adaptação não autorizada de Drácula com nomes e lugares alterados, e Drácula (1931),
-               filme no qual o personagem interpretado por Bela Lugosi. 
-       </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                        </div>
+                        <div class="modal-body">
+                            Começando com o vampiro mais famoso de toda a história, Drácula fez sucesso em inúmeras encarnações. Sua aparição original foi no livro Drácula de Bram Stoker, lançado em 1897. Daí em frente, o vampirão apareceu em vários filmes, seja em adaptações do
+                            romance em que originalmente apareceu ou, na maioria das vezes, em histórias que só incluem o personagem, mas não recontam a história de seu livro. Duas das aparições mais célebres foram em Nosferatu (1922), uma adaptação não
+                            autorizada de Drácula com nomes e lugares alterados, e Drácula (1931), filme no qual o personagem interpretado por Bela Lugosi.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-<div data-toggle="modal" data-target="#dracula"  class="aumentar sombra card text-center" style="width: 18rem;">
-    <img src="imagens/dracula.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Dracula</h5>
-        <p class="card-text">Começando com o vampiro mais famoso de toda a história. 
-        </p>
-        <a data-toggle="modal" data-target="#dracula" href="#" class="btn btn-primary">Conheça mais...</a>
-    </div>
-</div>
-<!--fechamento card dracula-->
+            <div data-toggle="modal" data-target="#dracula" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/dracula.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dracula</h5>
+                    <p class="card-text">Começando com o vampiro mais famoso de toda a história.
+                    </p>
+                    <a data-toggle="modal" data-target="#dracula" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card dracula-->
 
- <!--card frankenstein  -->  
- <div class="modal fade" id="frankenstein"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">FRANKENSTEIN</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card frankenstein  -->
+            <div class="modal fade" id="frankenstein" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">FRANKENSTEIN</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        Também surgido da literatura, o monstro feito de pedaços de corpos pelo Dr.
-         Victor Frankenstein surgiu no romance Frankenstein ou o
-         Moderno Prometeu, de Mary Shelley. A criatura tem sua retratação mais
-          famosa em Frankenstein (1931). Contudo, o filme difere do livro e retrata o monstro como um 
-          ser monossilábico (originalmente, o monstro era inteligente, educado e gentil) pelo fato de um criado do Dr. 
-         Victor ter trocado o cérebro da criatura pelo de um doente mental. Porém existem
-           vários outros filmes que se aproximam mais da obra literária, como Frankenstein de Mary Shelley (1994). 
-
-           O filme original deu origem a várias continuações, como Bride of Frankenstein (1935) e Son of Frankenstein 
-           (1939), filmes “mash-ups” com outros monstros famosos como House of Frankenstein (1944),
-           e remakes/reboots/paródias como Frankenweenie (2012) e Victor Frankenstein, que será lançado esse ano. 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                        </div>
+                        <div class="modal-body">
+                            Também surgido da literatura, o monstro feito de pedaços de corpos pelo Dr. Victor Frankenstein surgiu no romance Frankenstein ou o Moderno Prometeu, de Mary Shelley. A criatura tem sua retratação mais famosa em Frankenstein (1931). Contudo, o filme difere
+                            do livro e retrata o monstro como um ser monossilábico (originalmente, o monstro era inteligente, educado e gentil) pelo fato de um criado do Dr. Victor ter trocado o cérebro da criatura pelo de um doente mental. Porém existem
+                            vários outros filmes que se aproximam mais da obra literária, como Frankenstein de Mary Shelley (1994). O filme original deu origem a várias continuações, como Bride of Frankenstein (1935) e Son of Frankenstein (1939), filmes
+                            “mash-ups” com outros monstros famosos como House of Frankenstein (1944), e remakes/reboots/paródias como Frankenweenie (2012) e Victor Frankenstein, que será lançado esse ano.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-<div data-toggle="modal" data-target="#frankenstein" class="aumentar sombra card text-center" style="width: 18rem;">
-  <img src="imagens/frankenstein.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="card-title">Frankenstein  </h5>
-      <p class="card-text">Monstro feito de pedaços de corpos pelo Dr. Victor Frankenstein. 
+            <div data-toggle="modal" data-target="#frankenstein" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/frankenstein.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Frankenstein </h5>
+                    <p class="card-text">Monstro feito de pedaços de corpos pelo Dr. Victor Frankenstein.
 
-      </p>
-      <a data-toggle="modal" data-target="#frankenstein" href="#" class="btn btn-primary">Conheça mais...</a>
-  </div>
-</div>
-<!--fechamento card frankenstein  -->
+                    </p>
+                    <a data-toggle="modal" data-target="#frankenstein" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card frankenstein  -->
 
 
- <!--card diabo  -->  
- <div class="modal fade" id="diabo"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">DIABO</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card diabo  -->
+            <div class="modal fade" id="diabo" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">DIABO</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        Tá, antes dessa entrada, queremos deixar claro que não somos nenhum tipo de satanistas ou algo do tipo. Mas não dá pra fazer uma lista com 
-        os “melhores monstros” do cinema sem citar o primeiro monstro a ser retratado num filme de terror: Belzebu, Capiroto, Sete-Pele, Satã, 
-        Diabo, como preferir. Le Manoir du Diable, de 1896, é considerado o primeiro filme de terror já feito, com o seu monstro sendo Mephistopheles. 
-        Daí em diante, o capeta foi retratado em inúmeras outras obras, seja em filmes de terror, comédias, dramas, filmes de ação e pelo menos 
-        um filme de herói. Uma das aparições mais legais foi em South Park: Maior, Melhor e Sem Cortes (1999), em que o diabo é gay e tem um caso com Saddam Husseim. 
+                        </div>
+                        <div class="modal-body">
+                            Tá, antes dessa entrada, queremos deixar claro que não somos nenhum tipo de satanistas ou algo do tipo. Mas não dá pra fazer uma lista com os “melhores monstros” do cinema sem citar o primeiro monstro a ser retratado num filme de terror: Belzebu, Capiroto,
+                            Sete-Pele, Satã, Diabo, como preferir. Le Manoir du Diable, de 1896, é considerado o primeiro filme de terror já feito, com o seu monstro sendo Mephistopheles. Daí em diante, o capeta foi retratado em inúmeras outras obras,
+                            seja em filmes de terror, comédias, dramas, filmes de ação e pelo menos um filme de herói. Uma das aparições mais legais foi em South Park: Maior, Melhor e Sem Cortes (1999), em que o diabo é gay e tem um caso com Saddam Husseim.
 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-<div data-toggle="modal" data-target="#diabo" class="aumentar sombra card text-center" style="width: 18rem;">
-  <img src="imagens/diabo.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="card-title">Diabo  </h5>
-      <p class="card-text">Belzebu, Capiroto, Sete-Pele, Satã, Diabo, como preferir. 
-      </p>
-      <a data-toggle="modal" data-target="#diabo" href="#" class="btn btn-primary">Conheça mais...</a>
-  </div>
-</div>
-<!--fechamento card diabo  -->
+            <div data-toggle="modal" data-target="#diabo" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/diabo.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Diabo </h5>
+                    <p class="card-text">Belzebu, Capiroto, Sete-Pele, Satã, Diabo, como preferir.
+                    </p>
+                    <a data-toggle="modal" data-target="#diabo" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card diabo  -->
 
 
- <!--card hannibal lecter  -->  
- <div class="modal fade" id="hanniballecter"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">HANNIBAL LECTER</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card hannibal lecter  -->
+            <div class="modal fade" id="hanniballecter" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">HANNIBAL LECTER</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        Hannibal Lecter nasceu no Castelo Lecter em 1938, dia 30 de Janeiro,[1] em Caunas, na Lituânia. Seu pai, o Conde Lecter, descendia de uma importante família lituana, enquanto sua mãe, Simonetta, pertencia à alta burguesia italiana. Hannibal teve apenas uma irmã, Mischa Lecter, nascida por volta de 1939, mesmo ano que começou a Segunda Guerra Mundial.
+                        </div>
+                        <div class="modal-body">
+                            Hannibal Lecter nasceu no Castelo Lecter em 1938, dia 30 de Janeiro,[1] em Caunas, na Lituânia. Seu pai, o Conde Lecter, descendia de uma importante família lituana, enquanto sua mãe, Simonetta, pertencia à alta burguesia italiana. Hannibal teve apenas
+                            uma irmã, Mischa Lecter, nascida por volta de 1939, mesmo ano que começou a Segunda Guerra Mundial. Durante a II Guerra Mundial, Lecter passou por vários acontecimentos traumáticos de grande intensidade. Por essa época, a Lituânia
+                            sofria a devastação da guerra, devido aos ataques Nazistas sobre a Rússia. A família Lecter foi vítima das incursões alemãs pelo seu país, tendo apenas sobrevivido Hannibal e Mischa do confronto entre as tropas nazistas e o
+                            Exército Vermelho. Segundo a novela de Thomas Harris, os irmãos tornaram-se cativos dos hiwis (lituanos traidores, que ajudavam os nazistas). Após este episódio. Os hiwis, que se faziam passar por equipes da Cruz Vermelha,
+                            instalaram-se na casa de campo da família Lecter para se abrigar de um rigoroso inverno e acabaram matando Mischa e a devoraram, traumatizando Hannibal. O ator Anthony Hopkins, que mais interpretou a personagem no cinema. Depois
+                            da Guerra, Hannibal foi criado num orfanato soviético instalado no antigo Castelo Lecter, na Lituânia, até ser encontrado por seu tio, Robert, e ser levado para Paris. Quando seu tio foi assassinado numa briga, Hannibal passou
+                            a ser criado pela esposa de Robert, Lady Murasaki, uma japonesa sobrevivente da bomba atômica. Em Paris, Hannibal estudou medicina. Ainda na França, ele cometeu seus primeiros assassinatos, todos por vingança. Entre as primeiras
+                            vitimas de Hannibal, estavam: o peixeiro Paul Momund, que havia matado Robert Lecter após uma briga, e os hiwis que haviam matado sua irmã, Mischa, e os quais Hannibal caçou um por um. Após esses crimes, Hannibal fugiu para
+                            os EUA. Entre 1970 e 1975, Hannibal Lecter adquiriu o título de Dr. em Medicina, na especialidade de Psiquiatria, no estado de Maryland, nos EUA. Em 1975, o Dr. Lecter trabalhou como especialista em psiquiatria nos tribunais
+                            de Maryland e Virgínia. A primeira vítima de Lecter nos EUA foi Mason Verger, personagem de tendências homossexuais, membro da sua lista de pacientes influentes, que adquiriu certa amizade com Dr. Lecter. Hannibal, a determinada
+                            altura, entorpece Verger e após pancada na nuca que o deixa tetraplégico, dá apenas a cara a cães mantidos em clausura e privados de alimento. Assim, Mason fica com a face totalmente deformada. No entanto, Mason Verger sobreviveu,
+                            tetraplégico e deformado facialmente. Esta personagem é uma das duas vítimas que sobrevivem aos ataques de Lecter. No papel de ajudante do FBI na elaboração de perfis psicológicos criminais, Lecter travou uma relação de amizade
+                            com o agente especial Will Graham, o qual posteriormente se converterá numa das suas vítimas e a segunda (e última) a sobreviver aos seus ataques. Este fato põe a verdade ao descoberto e, em seguida, Lecter é capturado para
+                            ser sentenciado em julgamento, no qual é apresentada uma lista de nove vítimas comprovadas até esse momento. Hannibal é condenado a nove prisões perpétuas no Hospital Forense da Cidade Independente de Baltimore. Mesmo preso,
+                            Hannibal continua ajudando o FBI. A estudante Clarice Starling é designada para conseguir que Hannibal ajude o Bureau a salvar a filha de uma Senadora. Hannibal e Clarisse desenvolveriam um relacionamento intimo. Mesmo após
+                            a fuga do médico, os dois continuaram ligados.
 
-        Durante a II Guerra Mundial, Lecter passou por vários acontecimentos traumáticos de grande intensidade. Por essa época, a Lituânia sofria a devastação da guerra, devido aos ataques Nazistas sobre a Rússia. A família Lecter foi vítima das incursões alemãs pelo seu país, tendo apenas sobrevivido Hannibal e Mischa do confronto entre as tropas nazistas e o Exército Vermelho. Segundo a novela de Thomas Harris, os irmãos tornaram-se cativos dos hiwis (lituanos traidores, que ajudavam os nazistas). Após este episódio. Os hiwis, que se faziam passar por equipes da Cruz Vermelha, instalaram-se na casa de campo da família Lecter para se abrigar de um rigoroso inverno e acabaram matando Mischa e a devoraram, traumatizando Hannibal.
-        
-        
-        O ator Anthony Hopkins, que mais interpretou a personagem no cinema.
-        Depois da Guerra, Hannibal foi criado num orfanato soviético instalado no antigo Castelo Lecter, na Lituânia, até ser encontrado por seu tio, Robert, e ser levado para Paris. Quando seu tio foi assassinado numa briga, Hannibal passou a ser criado pela esposa de Robert, Lady Murasaki, uma japonesa sobrevivente da bomba atômica. Em Paris, Hannibal estudou medicina. Ainda na França, ele cometeu seus primeiros assassinatos, todos por vingança. Entre as primeiras vitimas de Hannibal, estavam: o peixeiro Paul Momund, que havia matado Robert Lecter após uma briga, e os hiwis que haviam matado sua irmã, Mischa, e os quais Hannibal caçou um por um. Após esses crimes, Hannibal fugiu para os EUA.
-        
-        Entre 1970 e 1975, Hannibal Lecter adquiriu o título de Dr. em Medicina, na especialidade de Psiquiatria, no estado de Maryland, nos EUA. Em 1975, o Dr. Lecter trabalhou como especialista em psiquiatria nos tribunais de Maryland e Virgínia. A primeira vítima de Lecter nos EUA foi Mason Verger, personagem de tendências homossexuais, membro da sua lista de pacientes influentes, que adquiriu certa amizade com Dr. Lecter. Hannibal, a determinada altura, entorpece Verger e após pancada na nuca que o deixa tetraplégico, dá apenas a cara a cães mantidos em clausura e privados de alimento. Assim, Mason fica com a face totalmente deformada. No entanto, Mason Verger sobreviveu, tetraplégico e deformado facialmente. Esta personagem é uma das duas vítimas que sobrevivem aos ataques de Lecter.
-        
-        No papel de ajudante do FBI na elaboração de perfis psicológicos criminais, Lecter travou uma relação de amizade com o agente especial Will Graham, o qual posteriormente se converterá numa das suas vítimas e a segunda (e última) a sobreviver aos seus ataques. Este fato põe a verdade ao descoberto e, em seguida, Lecter é capturado para ser sentenciado em julgamento, no qual é apresentada uma lista de nove vítimas comprovadas até esse momento. Hannibal é condenado a nove prisões perpétuas no Hospital Forense da Cidade Independente de Baltimore.
-        
-        Mesmo preso, Hannibal continua ajudando o FBI. A estudante Clarice Starling é designada para conseguir que Hannibal ajude o Bureau a salvar a filha de uma Senadora. Hannibal e Clarisse desenvolveriam um relacionamento intimo. Mesmo após a fuga do médico, os dois continuaram ligados.
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
-<div data-toggle="modal" data-target="#diabo" class="aumentar sombra card text-center" style="width: 18rem;">
-  <img src="imagens/hannibal-lecter.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="card-title">Hannibal Lecter</h5>
-      <p class="card-text"> Hannibal é um assassino formado em medicina. 
-      </p>
-      <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
-  </div>
-</div>
-<!--fechamento card hannibal lecter  -->
+            <div data-toggle="modal" data-target="#diabo" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/hannibal-lecter.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Hannibal Lecter</h5>
+                    <p class="card-text"> Hannibal é um assassino formado em medicina.
+                    </p>
+                    <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card hannibal lecter  -->
 
-<!--card leatherface  -->  
-<div class="modal fade" id="leatherface"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">LEATHER FACE</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <!--card leatherface  -->
+            <div class="modal fade" id="leatherface" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">LEATHER FACE</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        Leatherface é um personagem fictício da série de filmes slasher The Texas Chain Saw Massacre. Foi criado pelos cineastas Tobe Hooper e Kim Henkel. O personagem usa máscaras feitas de pele humana (dai o seu nome, uma junção de "leather" [couro] e "face" [rosto]) e participa em assassinatos e canibalismo juntamente com a sua família incestuosa. Leatherface apareceu no primeiro filme da série em 1974 (interpretado por Gunnar Hansen) e nas subsequentes continuações e remakes. O assassino Ed Gein, que usava uma máscara feita de pele humana, teria sido a inspiração para elementos no filme original. Apesar de receber ordens dos membros mais velhos da sua família, Leatherface é considerado o principal antagonista da franquia, porque além de aparecer em todos os filmes é ele quem conduz grande parte dos enredos. Para além do cinema, o personagem já apareceu noutra media, como banda desenhada e videojogos.
-
-        Numa votação feita pelos leitores do IGN, Leatherface ficou em #5 na lista dos "25 Maiores Vilões de Sempre do Terror" e em #6 numa votação semelhante para a revista Rolling Stone. Leatherface ficou em #4 na lista dos dez melhores vilões slasher para o site Fandango, e em #63 entre "100 Maiores Vilões de Sempre do Cinema", numa contagem feita pelo site Games Radar.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<div data-toggle="modal" data-target="#leatherface" class="aumentar sombra card text-center" style="width: 18rem;">
-  <img src="imagens/leatherface.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="card-title">Leatherface</h5>
-      <p class="card-text">Leatherface é  inspirado no assassino em série Ed Gein.
-      </p>
-      <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
-  </div>
-</div>
-<!--fechamento card leatherface  -->
+                        </div>
+                        <div class="modal-body">
+                            Leatherface é um personagem fictício da série de filmes slasher The Texas Chain Saw Massacre. Foi criado pelos cineastas Tobe Hooper e Kim Henkel. O personagem usa máscaras feitas de pele humana (dai o seu nome, uma junção de "leather" [couro] e "face"
+                            [rosto]) e participa em assassinatos e canibalismo juntamente com a sua família incestuosa. Leatherface apareceu no primeiro filme da série em 1974 (interpretado por Gunnar Hansen) e nas subsequentes continuações e remakes.
+                            O assassino Ed Gein, que usava uma máscara feita de pele humana, teria sido a inspiração para elementos no filme original. Apesar de receber ordens dos membros mais velhos da sua família, Leatherface é considerado o principal
+                            antagonista da franquia, porque além de aparecer em todos os filmes é ele quem conduz grande parte dos enredos. Para além do cinema, o personagem já apareceu noutra media, como banda desenhada e videojogos. Numa votação feita
+                            pelos leitores do IGN, Leatherface ficou em #5 na lista dos "25 Maiores Vilões de Sempre do Terror" e em #6 numa votação semelhante para a revista Rolling Stone. Leatherface ficou em #4 na lista dos dez melhores vilões slasher
+                            para o site Fandango, e em #63 entre "100 Maiores Vilões de Sempre do Cinema", numa contagem feita pelo site Games Radar.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
-<!--card pinheade  -->  
-<div class="modal fade" id="pinheade"  data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">PINHEAD</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <div data-toggle="modal" data-target="#leatherface" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/leatherface.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Leatherface</h5>
+                    <p class="card-text">Leatherface é inspirado no assassino em série Ed Gein.
+                    </p>
+                    <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card leatherface  -->
+
+
+            <!--card pinheade  -->
+            <div class="modal fade" id="pinheade" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="false">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">PINHEAD</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        Pinhead é um personagem fictício e o principal antagonista da franquia Hellraiser , aparecendo pela primeira vez como uma figura não identificada na novela de Clive Barker, The Hellbound Heart . [2] O nome "Pinhead" é ​​derivado de um apelido dado a ele pela equipe do primeiro filme Hellraiser ; ele é creditado pela primeira vez como tal em Hellbound: Hellraiser II . Quase trinta anos após a publicação de The Hellbound Heart , o personagem recebeu as designações de Hell Priest e Cold Man nas sequências que se seguiram,Os Evangelhos Escarlates e Hellraiser: The Toll .
+                        </div>
+                        <div class="modal-body">
+                            Pinhead é um personagem fictício e o principal antagonista da franquia Hellraiser , aparecendo pela primeira vez como uma figura não identificada na novela de Clive Barker, The Hellbound Heart . [2] O nome "Pinhead" é ​​derivado de um apelido dado a ele
+                            pela equipe do primeiro filme Hellraiser ; ele é creditado pela primeira vez como tal em Hellbound: Hellraiser II . Quase trinta anos após a publicação de The Hellbound Heart , o personagem recebeu as designações de Hell Priest
+                            e Cold Man nas sequências que se seguiram,Os Evangelhos Escarlates e Hellraiser: The Toll . Pinhead é um dos líderes dos Cenobitas , anteriormente humanos, mas transformados em criaturas que residem em um reino extradimensional
+                            , que viajam para a Terra através de uma caixa de quebra-cabeça chamada Configuração do Lamento para colher as almas humanas. Suas origens e a natureza dos Cenobitas variam dependendo do médium: enquanto o personagem começou
+                            como uma entidade amoral cegamente devotada à prática do sadomasoquismo experimental , representações posteriores o retrataram como explicitamente mau e até mesmo demoníaco na origem. A aparição do personagem em Hellraiser,
+                            de 1987, marcou um afastamento significativo da representação padrão dos vilões de filmes de terror nos anos 1980 , que tendiam a ser completamente mudos ou fornecer comentários simplistas enquanto matavam suas vítimas. Em
+                            vez disso, Pinhead foi retratado como quieto, mas articulado e inteligente, atraindo a influência de representações cinematográficas clássicas do Conde Drácula
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        Pinhead é um dos líderes dos Cenobitas , anteriormente humanos, mas transformados em criaturas que residem em um reino extradimensional , que viajam para a Terra através de uma caixa de quebra-cabeça chamada Configuração do Lamento para colher as almas humanas. Suas origens e a natureza dos Cenobitas variam dependendo do médium: enquanto o personagem começou como uma entidade amoral cegamente devotada à prática do sadomasoquismo experimental , representações posteriores o retrataram como explicitamente mau e até mesmo demoníaco na origem.
-        
-        A aparição do personagem em Hellraiser, de 1987, marcou um afastamento significativo da representação padrão dos vilões de filmes de terror nos anos 1980 , que tendiam a ser completamente mudos ou fornecer comentários simplistas enquanto matavam suas vítimas. Em vez disso, Pinhead foi retratado como quieto, mas articulado e inteligente, atraindo a influência de representações cinematográficas clássicas do Conde Drácula 
-       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
-
-<div data-toggle="modal" data-target="#pinheade" class="aumentar sombra card text-center" style="width: 18rem;">
-  <img src="imagens/pinheade.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <h5 class="card-title">Pinheade</h5>
-      <p class="card-text">Pinhead é o principal antagonista da franquia Hellraiser.
-      </p>
-      <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
-  </div>
-</div>
-<!--fechamento card pinheade  -->
+            <div data-toggle="modal" data-target="#pinheade" class="aumentar sombra card text-center" style="width: 18rem;">
+                <img src="imagens/pinheade.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pinheade</h5>
+                    <p class="card-text">Pinhead é o principal antagonista da franquia Hellraiser.
+                    </p>
+                    <a data-toggle="modal" data-target="#hanniballecter" href="#" class="btn btn-primary">Conheça mais...</a>
+                </div>
+            </div>
+            <!--fechamento card pinheade  -->
 
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
